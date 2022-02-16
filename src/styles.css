@@ -26,12 +26,15 @@ body {
   background-color: gainsboro;
 }
 
-ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.pokemon-list  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
     align-items: center;
     list-style-type: none;
+    padding: 32px;
+    height: 120px;
 }
 
 /* Modal time! */
