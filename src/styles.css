@@ -105,4 +105,9 @@ body {
       text-align: center;
       border-radius: 10px;
     }
+
+    .pokemon-list {
+      display: grid;
+      grid-template-columns: 2fr;
+    }
   }

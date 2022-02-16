@@ -1,8 +1,8 @@
 /*This is the array for the pokeDex, */
 
-let pokemonRepository = (function () {
-  let pokemonList = [];
-  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
+const pokemonRepository = (function () {
+  const pokemonList = [];
+  const apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
 
   function add(pokemon) {
     if (typeof pokemon === "object" && "name" in pokemon) {
@@ -61,7 +61,7 @@ let pokemonRepository = (function () {
   //Explanation: created function to add within the pokemon-list items in to the ul. Which hold the items as the inner text.
   function addListItem(pokemon) {
     let pokemonList = document.querySelector(".pokemon-list");
-    let listPokemon = document.createElement("li");
+    let listPokemonElement = document.createElement("li");
     let button = document.createElement("button");
     button.innerText = pokemon.name;
     button.classList.add(
@@ -72,9 +72,9 @@ let pokemonRepository = (function () {
     );
 
     //adding data toggle, and a data target to trigger the modal
-    listPokemon.setAttribute("data-toggle", "modal");
-    listPokemon.setAttribute("data-target", "#pokemonModal");
-    listPokemon.appendChild(button);
+    listPokemonElement.setAttribute("data-toggle", "modal");
+    listPokemonElement.setAttribute("data-target", "#pokemonModal");
+    listPokemonElement.appendChild(button);
     pokemonList.append(listPokemon);
 
     //an event listener for the new button created
